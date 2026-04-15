@@ -8,7 +8,7 @@ You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 
 ```bash
 cd frappe-bench
-bench get-app Loginscr
+bench get-app https://github.com/haithamsamisalama/loginscr.git
 bench install-app loginscr
 ```
 
