@@ -1,7 +1,7 @@
 app_name = "loginscr"
 app_title = "Loginscr"
 app_publisher = "Haitham Salama"
-app_description = "login screen for ERP of Mileny"
+app_description = "login screen for ERP of Milenyum"
 app_email = "admin@milenyum.ae"
 app_license = "mit"
 
