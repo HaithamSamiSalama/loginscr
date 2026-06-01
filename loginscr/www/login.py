@@ -118,6 +118,26 @@ def get_context(context):
 		else None
 	)
 
+	# Read subscription expiry data
+	expiry_date_str = None
+	remaining_days = None
+	try:
+		import os
+		import datetime
+		data_txt_path = frappe.get_site_path('data.txt')
+		if os.path.exists(data_txt_path):
+			with open(data_txt_path, 'r') as f:
+				expiry_date_str = f.read().strip()
+			if expiry_date_str:
+				expiry_date = datetime.datetime.strptime(expiry_date_str, "%d/%m/%Y").date()
+				today = datetime.date.today()
+				remaining_days = (expiry_date - today).days
+	except Exception:
+		frappe.log_error(title="Subscription Check Error")
+
+	context["expiry_date"] = expiry_date_str
+	context["remaining_days"] = remaining_days
+
 	return context
 
 
