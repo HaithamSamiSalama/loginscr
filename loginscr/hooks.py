@@ -5,6 +5,13 @@ app_description = "login screen for ERP of Milenyum"
 app_email = "admin@milenyum.ae"
 app_license = "mit"
 
+##loginscr scc
+####web_include_css = "/assets/loginscr/css/loginscr.css"
+
+website_route_rules = [
+    {"from_route": "/login", "to_route": "login"},
+]
+
 # Apps
 # ------------------
 
@@ -30,7 +37,9 @@ app_license = "mit"
 
 # include js, css files in header of web template
 #web_include_css = "/assets/loginscr/css/loginscr.css"
-web_include_css = "/assets/loginscr/css/loginscr.css"
+
+
+
 # web_include_js = "/assets/loginscr/js/loginscr.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -250,7 +259,4 @@ web_include_css = "/assets/loginscr/css/loginscr.css"
 # ------------
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
-website_route_rules = [
-    {"from_route": "/login", "to_route": "login"},
-]
 
